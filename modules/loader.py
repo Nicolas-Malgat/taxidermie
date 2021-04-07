@@ -39,7 +39,7 @@ class Loader:
             os.rmdir(self.file)
             raise e
 
-        if not Loader.__ask_download_zip("Dé-zipper le fichier [y]/n ? "):
+        if not Loader.__ask("Dé-zipper le fichier [y]/n ? "):
             return self.file.split('/')[-1]
 
         if self.extraction_target:
