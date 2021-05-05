@@ -1,7 +1,6 @@
 from os import path, makedirs, sep
 import os
 
-from numpy.core.fromnumeric import std
 import requests
 import sys
 import zipfile
@@ -30,8 +29,7 @@ class Loader:
             return self.file.split('/')[-1]
 
         if not Loader.__ask("Télécharger le fichier [y]/n ? "):
-            pass
-            # return self.file.split('/')[-1]
+            return self.file.split('/')[-1]
     
         try:
             self._download_data()
